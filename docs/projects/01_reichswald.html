@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="Forest health in the Nürnberger Reichswald – Climate Risk Atlas · Nürnberg–Fürth–Erlangen">
 <meta property="og:description" content="Sentinel-2 NDVI/NDMI 2017–2025, drought impact mapping and a relative wildfire susceptibility index.">
-<meta property="og:image" content="https://ivan220.github.io/climate-risk-atlas-nfe/images/thumb_reichswald.jpg">
+<meta property="og:image" content="https://ivan-alonso-rs.github.io/climate-risk-atlas-nfe/images/thumb_reichswald.jpg">
 <meta property="og:site_name" content="Climate Risk Atlas · Nürnberg–Fürth–Erlangen">
 </head>
 
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/ivan220/climate-risk-atlas-nfe"> <i class="bi bi-github" role="img" aria-label="Code on GitHub">
+    <a class="nav-link" href="https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe"> <i class="bi bi-github" role="img" aria-label="Code on GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -211,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>2018–2020 drought:</strong> summer canopy moisture (NDMI) and greenness (NDVI) were below average in all three years, with the <strong>low point in 2020</strong>. Forest-wide values returned to normal from 2021.</li>
 <li><strong>45 % of forest pixels</strong> had a 2020 summer NDMI more than 0.05 below 2017. The loss is widespread, and some sharp-edged patches point to harvesting.</li>
 <li><strong>Wildfire susceptibility</strong> is highest in <strong>pine stands along motorways, main roads and settlement edges</strong>. Pine is 58 % of the forest but 92 % of the high class.</li>
-<li>Method and code: <a href="https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01_reichswald_ndvi_ndmi.ipynb">notebook 1</a> · <a href="https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01b_reichswald_fire_susceptibility.ipynb">notebook 1b</a></li>
+<li>Method and code: <a href="https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe/blob/main/notebooks/01_reichswald_ndvi_ndmi.ipynb">notebook 1</a> · <a href="https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe/blob/main/notebooks/01b_reichswald_fire_susceptibility.ipynb">notebook 1b</a></li>
 </ul>
 </div>
 </div>
@@ -260,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Processing was done in Google Earth Engine and Python (rasterio, geopandas). Code: <a href="https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01_reichswald_ndvi_ndmi.ipynb"><code>01_reichswald_ndvi_ndmi.ipynb</code></a> and <a href="https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01b_reichswald_fire_susceptibility.ipynb"><code>01b_reichswald_fire_susceptibility.ipynb</code></a>, with reusable functions in <a href="https://github.com/ivan220/climate-risk-atlas-nfe/tree/main/src"><code>src/</code></a>.</p>
+<p>Processing was done in Google Earth Engine and Python (rasterio, geopandas). Code: <a href="https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe/blob/main/notebooks/01_reichswald_ndvi_ndmi.ipynb"><code>01_reichswald_ndvi_ndmi.ipynb</code></a> and <a href="https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe/blob/main/notebooks/01b_reichswald_fire_susceptibility.ipynb"><code>01b_reichswald_fire_susceptibility.ipynb</code></a>, with reusable functions in <a href="https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe/tree/main/src"><code>src/</code></a>.</p>
 </section>
 <section id="method" class="level2">
 <h2 class="anchored" data-anchor-id="method">Method</h2>
@@ -490,7 +490,7 @@ Figure&nbsp;2: Relative wildfire susceptibility of forest pixels in the Nürnber
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/ivan220\.github\.io\/climate-risk-atlas-nfe\/");
+        var filterRegex = new RegExp("https:\/\/ivan-alonso-rs\.github\.io\/climate-risk-atlas-nfe\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

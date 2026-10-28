@@ -58,7 +58,7 @@ of the high wildfire-susceptibility class is pine, concentrated along roads and 
 [Read the full case study →](projects/01_reichswald.qmd){.btn .btn-primary .mt-3}
 
 ::: {.author-strip}
-**About the author.** Iván Alonso, geographer and remote sensing specialist based near Erlangen (MSc Environmental & Climate Sciences, FAU). [More about me](about.qmd) · [Code on GitHub](https://github.com/ivan220/climate-risk-atlas-nfe) · [LinkedIn](https://www.linkedin.com/in/ivan-alonso-rs/)
+**About the author.** Iván Alonso, geographer and remote sensing specialist based near Erlangen (MSc Environmental & Climate Sciences, FAU). [More about me](about.qmd) · [Code on GitHub](https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe) · [LinkedIn](https://www.linkedin.com/in/ivan-alonso-rs/)
 :::
 
 ---

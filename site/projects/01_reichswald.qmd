@@ -13,7 +13,7 @@ resources:
 - **2018–2020 drought:** summer canopy moisture (NDMI) and greenness (NDVI) were below average in all three years, with the **low point in 2020**. Forest-wide values returned to normal from 2021.
 - **45 % of forest pixels** had a 2020 summer NDMI more than 0.05 below 2017. The loss is widespread, and some sharp-edged patches point to harvesting.
 - **Wildfire susceptibility** is highest in **pine stands along motorways, main roads and settlement edges**. Pine is 58 % of the forest but 92 % of the high class.
-- Method and code: [notebook 1](https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01_reichswald_ndvi_ndmi.ipynb) · [notebook 1b](https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01b_reichswald_fire_susceptibility.ipynb)
+- Method and code: [notebook 1](https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe/blob/main/notebooks/01_reichswald_ndvi_ndmi.ipynb) · [notebook 1b](https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe/blob/main/notebooks/01b_reichswald_fire_susceptibility.ipynb)
 :::
 
 ## Problem
@@ -33,7 +33,7 @@ The Nürnberger Reichswald (~280 km²) surrounds Nürnberg, Fürth and Erlangen 
 | OpenStreetMap roads, ESA WorldCover built-up | Human ignition proxies (wildfire index) |
 | SRTM 30 m | Slope check |
 
-Processing was done in Google Earth Engine and Python (rasterio, geopandas). Code: [`01_reichswald_ndvi_ndmi.ipynb`](https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01_reichswald_ndvi_ndmi.ipynb) and [`01b_reichswald_fire_susceptibility.ipynb`](https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01b_reichswald_fire_susceptibility.ipynb), with reusable functions in [`src/`](https://github.com/ivan220/climate-risk-atlas-nfe/tree/main/src).
+Processing was done in Google Earth Engine and Python (rasterio, geopandas). Code: [`01_reichswald_ndvi_ndmi.ipynb`](https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe/blob/main/notebooks/01_reichswald_ndvi_ndmi.ipynb) and [`01b_reichswald_fire_susceptibility.ipynb`](https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe/blob/main/notebooks/01b_reichswald_fire_susceptibility.ipynb), with reusable functions in [`src/`](https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe/tree/main/src).
 
 ## Method
 

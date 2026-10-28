@@ -25,4 +25,4 @@ Every case study follows the same structure: **problem → data → method → r
 ## Contact
 
 - [LinkedIn](https://www.linkedin.com/in/ivan-alonso-rs/)
-- [Code on GitHub](https://github.com/ivan220/climate-risk-atlas-nfe)
+- [Code on GitHub](https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe)

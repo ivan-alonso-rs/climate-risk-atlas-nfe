@@ -5,8 +5,8 @@ project:
 website:
   title: "Climate Risk Atlas · Nürnberg–Fürth–Erlangen"
   description: "Open-data case studies on climate risks in the Nürnberg–Fürth–Erlangen metropolitan core, built with Sentinel-2 and Google Earth Engine."
-  site-url: https://ivan220.github.io/climate-risk-atlas-nfe/
-  repo-url: https://github.com/ivan220/climate-risk-atlas-nfe
+  site-url: https://ivan-alonso-rs.github.io/climate-risk-atlas-nfe/
+  repo-url: https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe
   image: images/banner.jpg
   open-graph: true
   navbar:
@@ -22,7 +22,7 @@ website:
         text: About
     right:
       - icon: github
-        href: https://github.com/ivan220/climate-risk-atlas-nfe
+        href: https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe
         aria-label: Code on GitHub
       - icon: linkedin
         href: https://www.linkedin.com/in/ivan-alonso-rs/
