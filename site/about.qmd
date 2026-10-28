@@ -18,6 +18,14 @@ I built this atlas to show how open Earth observation data can turn climate risk
 | Open data | ESA WorldCover, DLR Tree Species Germany, OpenStreetMap, WDPA, SRTM |
 | Communication | Reproducible notebooks, interactive web maps, Quarto website, English + German summaries |
 
+## Languages
+
+| Language | Level |
+|---|---|
+| Spanish | Native |
+| English | B2 (MSc taught in English) |
+| German | B1, in progress |
+
 ## Approach
 
 Every case study follows the same structure: **problem → data → method → results → recommendation → limitations**. Assumptions are stated explicitly and tested where possible. Limitations are part of the result, not a footnote.

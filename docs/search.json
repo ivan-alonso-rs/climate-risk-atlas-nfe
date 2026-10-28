@@ -116,7 +116,7 @@
     "href": "projects/01_reichswald.html#references",
     "title": "Forest health in the Nürnberger Reichswald",
     "section": "References",
-    "text": "References\n\nChuvieco, E. et al. (2010). Development of a framework for fire risk assessment using remote sensing and geographic information system technologies. Ecological Modelling, 221(1), 46–58. doi:10.1016/j.ecolmodel.2008.11.017\nDLR (2025). Tree Species Germany 2022 [dataset, 10 m, CC BY 4.0]. German Aerospace Center, EOC Geoservice.\nRomero-Calcerrada, R. et al. (2008). GIS analysis of spatial patterns of human-caused wildfire ignition risk in the SW of Madrid (Central Spain). Landscape Ecology. doi:10.1007/s10980-008-9190-2\nYebra, M. et al. (2013). A global review of remote sensing of live fuel moisture content for fire danger assessment: Moving towards operational products. Remote Sensing of Environment, 136, 455–468. doi:10.1016/j.rse.2013.05.029\nGao, B.-C. (1996). NDWI — A normalized difference water index for remote sensing of vegetation liquid water from space. Remote Sensing of Environment, 58(3), 257–266.\nRakovec, O. et al. (2022). The 2018–2020 multi-year drought sets a new benchmark in Europe. Earth’s Future, 10, e2021EF002394.\nSchuldt, B. et al. (2020). A first assessment of the impact of the extreme 2018 summer drought on Central European forests. Basic and Applied Ecology, 45, 86–103.\nWilson, E. H. & Sader, S. A. (2002). Detection of forest harvest type using multiple dates of Landsat TM imagery. Remote Sensing of Environment, 80(3), 385–396."
+    "text": "References\n\nChuvieco, E. et al. (2010). Development of a framework for fire risk assessment using remote sensing and geographic information system technologies. Ecological Modelling, 221(1), 46–58. doi:10.1016/j.ecolmodel.2008.11.017\nDLR (2025). Tree Species Germany 2022 [dataset, 10 m, CC BY 4.0]. German Aerospace Center, EOC Geoservice. download.geoservice.dlr.de/TREE_SPECIES_DE\nGao, B.-C. (1996). NDWI — A normalized difference water index for remote sensing of vegetation liquid water from space. Remote Sensing of Environment, 58(3), 257–266. doi:10.1016/S0034-4257(96)00067-3\nRakovec, O., Samaniego, L., Hari, V., Markonis, Y., Moravec, V., Thober, S. et al. (2022). The 2018–2020 multi-year drought sets a new benchmark in Europe. Earth’s Future, 10, e2021EF002394. doi:10.1029/2021EF002394\nRomero-Calcerrada, R. et al. (2008). GIS analysis of spatial patterns of human-caused wildfire ignition risk in the SW of Madrid (Central Spain). Landscape Ecology. doi:10.1007/s10980-008-9190-2\nSchuldt, B. et al. (2020). A first assessment of the impact of the extreme 2018 summer drought on Central European forests. Basic and Applied Ecology, 45, 86–103. doi:10.1016/j.baae.2020.04.003\nWilson, E. H. & Sader, S. A. (2002). Detection of forest harvest type using multiple dates of Landsat TM imagery. Remote Sensing of Environment, 80(3), 385–396. doi:10.1016/S0034-4257(01)00318-2\nYebra, M. et al. (2013). A global review of remote sensing of live fuel moisture content for fire danger assessment: Moving towards operational products. Remote Sensing of Environment, 136, 455–468. doi:10.1016/j.rse.2013.05.029"
   },
   {
     "objectID": "projects/01_reichswald.html#kurzfassung-deutsch",
@@ -138,6 +138,13 @@
     "title": "About",
     "section": "What this project demonstrates",
     "text": "What this project demonstrates\n\n\n\n\n\n\n\nArea\nTools and methods\n\n\n\n\nEarth observation\nSentinel-2 L2A, cloud masking (SCL), spectral indices (NDVI, NDMI), multi-year composites and anomalies\n\n\nCloud processing\nGoogle Earth Engine (Python API)\n\n\nGeospatial Python\nrasterio, geopandas, numpy/pandas, folium; raster–vector integration on a common grid\n\n\nSpatial analysis\nMulti-criteria susceptibility index, distance-decay factors, sensitivity analysis\n\n\nOpen data\nESA WorldCover, DLR Tree Species Germany, OpenStreetMap, WDPA, SRTM\n\n\nCommunication\nReproducible notebooks, interactive web maps, Quarto website, English + German summaries"
+  },
+  {
+    "objectID": "about.html#languages",
+    "href": "about.html#languages",
+    "title": "About",
+    "section": "Languages",
+    "text": "Languages\n\n\n\nLanguage\nLevel\n\n\n\n\nSpanish\nNative\n\n\nEnglish\nB2 (MSc taught in English)\n\n\nGerman\nB1, in progress"
   },
   {
     "objectID": "about.html#approach",
