@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6a4c8462d4f9405712c1ddc03be73240.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,9 +75,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<meta property="og:title" content="About – Climate Risk Atlas · Nürnberg–Fürth–Erlangen">
+<meta property="og:description" content="Open-data case studies on climate risks in the Nürnberg–Fürth–Erlangen metropolitan core, built with Sentinel-2 and Google Earth Engine.">
+<meta property="og:image" content="https://ivan220.github.io/climate-risk-atlas-nfe/images/banner.jpg">
+<meta property="og:site_name" content="Climate Risk Atlas · Nürnberg–Fürth–Erlangen">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -122,6 +126,18 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ivan220/climate-risk-atlas-nfe"> <i class="bi bi-github" role="img" aria-label="Code on GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/ivan-alonso-rs/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
@@ -132,9 +148,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -157,14 +171,62 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>I’m Iván Alonso, a geographer and remote sensing specialist based near Erlangen (MSc Environmental &amp; Climate Sciences, FAU).</p>
+<p>I’m <strong>Iván Alonso</strong>, a geographer and remote sensing specialist based near Erlangen (MSc Environmental &amp; Climate Sciences, FAU).</p>
+<p>I built this atlas to show how open Earth observation data can turn climate risks into clear, local evidence for planners, forest managers and municipalities.</p>
+<section id="what-this-project-demonstrates" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-project-demonstrates">What this project demonstrates</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Area</th>
+<th>Tools and methods</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Earth observation</td>
+<td>Sentinel-2 L2A, cloud masking (SCL), spectral indices (NDVI, NDMI), multi-year composites and anomalies</td>
+</tr>
+<tr class="even">
+<td>Cloud processing</td>
+<td>Google Earth Engine (Python API)</td>
+</tr>
+<tr class="odd">
+<td>Geospatial Python</td>
+<td>rasterio, geopandas, numpy/pandas, folium; raster–vector integration on a common grid</td>
+</tr>
+<tr class="even">
+<td>Spatial analysis</td>
+<td>Multi-criteria susceptibility index, distance-decay factors, sensitivity analysis</td>
+</tr>
+<tr class="odd">
+<td>Open data</td>
+<td>ESA WorldCover, DLR Tree Species Germany, OpenStreetMap, WDPA, SRTM</td>
+</tr>
+<tr class="even">
+<td>Communication</td>
+<td>Reproducible notebooks, interactive web maps, Quarto website, English + German summaries</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="approach" class="level2">
+<h2 class="anchored" data-anchor-id="approach">Approach</h2>
+<p>Every case study follows the same structure: <strong>problem → data → method → results → recommendation → limitations</strong>. Assumptions are stated explicitly and tested where possible. Limitations are part of the result, not a footnote.</p>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
 <ul>
 <li><a href="https://www.linkedin.com/in/ivan-alonso-rs/">LinkedIn</a></li>
-<li><a href="#">Code on GitHub</a></li>
-<li><a href="#">CV (PDF)</a></li>
+<li><a href="https://github.com/ivan220/climate-risk-atlas-nfe">Code on GitHub</a></li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -240,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ivan220\.github\.io\/climate-risk-atlas-nfe\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -571,14 +633,14 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p>Demonstration project with open data · Not an official assessment</p>
+</div>   
     <div class="nav-footer-center">
-<p>Demonstration project with open data · Iván Alonso</p>
-</div>
-    <div class="nav-footer-right">
       &nbsp;
     </div>
+    <div class="nav-footer-right">
+<p>© Iván Alonso · Built with Quarto</p>
+</div>
   </div>
 </footer>
 

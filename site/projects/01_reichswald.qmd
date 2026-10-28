@@ -1,15 +1,26 @@
 ---
 title: "Forest health in the Nürnberger Reichswald"
-subtitle: "How did the 2018–2020 drought affect the largest forest of the metropolitan area?"
+subtitle: "How did the 2018–2020 drought affect the largest forest of the metropolitan area, and where is it most susceptible to wildfire?"
+description: "Sentinel-2 NDVI/NDMI 2017–2025, drought impact mapping and a relative wildfire susceptibility index."
+image: ../images/thumb_reichswald.jpg
+categories: [Published]
 resources:
   - figures/*.html
 ---
+
+::: {.callout-tip}
+## Key findings
+- **2018–2020 drought:** summer canopy moisture (NDMI) and greenness (NDVI) were below average in all three years, with the **low point in 2020**. Forest-wide values returned to normal from 2021.
+- **45 % of forest pixels** had a 2020 summer NDMI more than 0.05 below 2017. The loss is widespread, and some sharp-edged patches point to harvesting.
+- **Wildfire susceptibility** is highest in **pine stands along motorways, main roads and settlement edges**. Pine is 58 % of the forest but 92 % of the high class.
+- Method and code: [notebook 1](https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01_reichswald_ndvi_ndmi.ipynb) · [notebook 1b](https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01b_reichswald_fire_susceptibility.ipynb)
+:::
 
 ## Problem
 
 The Nürnberger Reichswald (~280 km²) surrounds Nürnberg, Fürth and Erlangen and is dominated by pine on sandy, water-poor soils. It provides recreation, drinking water protection and cooling for more than a million people. Central Europe went through an exceptional multi-year drought in 2018–2020 (Rakovec et al. 2022), with widespread forest damage (Schuldt et al. 2020).
 
-**Question:** can open satellite data show when and where the Reichswald lost canopy vitality and moisture, and whether it recovered?
+**Questions:** can open satellite data show when and where the Reichswald lost canopy vitality and moisture, and whether it recovered? And which parts of the forest are most susceptible to wildfire?
 
 ## Data
 
@@ -22,7 +33,7 @@ The Nürnberger Reichswald (~280 km²) surrounds Nürnberg, Fürth and Erlangen 
 | OpenStreetMap roads, ESA WorldCover built-up | Human ignition proxies (wildfire index) |
 | SRTM 30 m | Slope check |
 
-Processing was done in Google Earth Engine and Python (rasterio, geopandas). Code: `notebooks/01_reichswald_ndvi_ndmi.ipynb` and `notebooks/01b_reichswald_fire_susceptibility.ipynb`.
+Processing was done in Google Earth Engine and Python (rasterio, geopandas). Code: [`01_reichswald_ndvi_ndmi.ipynb`](https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01_reichswald_ndvi_ndmi.ipynb) and [`01b_reichswald_fire_susceptibility.ipynb`](https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01b_reichswald_fire_susceptibility.ipynb), with reusable functions in [`src/`](https://github.com/ivan220/climate-risk-atlas-nfe/tree/main/src).
 
 ## Method
 
@@ -46,7 +57,7 @@ Processing was done in Google Earth Engine and Python (rasterio, geopandas). Cod
 <iframe src="figures/reichswald_dndmi_map.html" width="100%" height="520" style="border:none" title="Interactive map of NDMI change 2020–2017"></iframe>
 ```
 
-*Interactive map: change in summer NDMI between 2017 and 2020. Red = drier canopy in 2020. Switch to the satellite basemap with the layer control (top right).*
+*Interactive map: change in summer NDMI between 2017 and 2020. Red = drier canopy in 2020. Use the layer control (top right) to switch basemaps or hide the overlay.*
 
 - In **45 % of forest pixels**, summer NDMI in 2020 was more than 0.05 below 2017.
 - The loss is **widespread across the whole forest**, not limited to its edges.

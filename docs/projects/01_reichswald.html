@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Sentinel-2 NDVI/NDMI 2017–2025, drought impact mapping and a relative wildfire susceptibility index.">
 
 <title>Forest health in the Nürnberger Reichswald – Climate Risk Atlas · Nürnberg–Fürth–Erlangen</title>
 <style>
@@ -45,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6a4c8462d4f9405712c1ddc03be73240.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,6 +76,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<meta property="og:title" content="Forest health in the Nürnberger Reichswald – Climate Risk Atlas · Nürnberg–Fürth–Erlangen">
+<meta property="og:description" content="Sentinel-2 NDVI/NDMI 2017–2025, drought impact mapping and a relative wildfire susceptibility index.">
+<meta property="og:image" content="https://ivan220.github.io/climate-risk-atlas-nfe/images/thumb_reichswald.jpg">
+<meta property="og:site_name" content="Climate Risk Atlas · Nürnberg–Fürth–Erlangen">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -122,6 +127,18 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ivan220/climate-risk-atlas-nfe"> <i class="bi bi-github" role="img" aria-label="Code on GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/ivan-alonso-rs/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
@@ -155,9 +172,17 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Forest health in the Nürnberger Reichswald</h1>
-<p class="subtitle lead">How did the 2018–2020 drought affect the largest forest of the metropolitan area?</p>
-</div>
+<p class="subtitle lead">How did the 2018–2020 drought affect the largest forest of the metropolitan area, and where is it most susceptible to wildfire?</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Published</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Sentinel-2 NDVI/NDMI 2017–2025, drought impact mapping and a relative wildfire susceptibility index.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -172,10 +197,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Key findings
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>2018–2020 drought:</strong> summer canopy moisture (NDMI) and greenness (NDVI) were below average in all three years, with the <strong>low point in 2020</strong>. Forest-wide values returned to normal from 2021.</li>
+<li><strong>45 % of forest pixels</strong> had a 2020 summer NDMI more than 0.05 below 2017. The loss is widespread, and some sharp-edged patches point to harvesting.</li>
+<li><strong>Wildfire susceptibility</strong> is highest in <strong>pine stands along motorways, main roads and settlement edges</strong>. Pine is 58 % of the forest but 92 % of the high class.</li>
+<li>Method and code: <a href="https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01_reichswald_ndvi_ndmi.ipynb">notebook 1</a> · <a href="https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01b_reichswald_fire_susceptibility.ipynb">notebook 1b</a></li>
+</ul>
+</div>
+</div>
 <section id="problem" class="level2">
 <h2 class="anchored" data-anchor-id="problem">Problem</h2>
 <p>The Nürnberger Reichswald (~280 km²) surrounds Nürnberg, Fürth and Erlangen and is dominated by pine on sandy, water-poor soils. It provides recreation, drinking water protection and cooling for more than a million people. Central Europe went through an exceptional multi-year drought in 2018–2020 (Rakovec et al.&nbsp;2022), with widespread forest damage (Schuldt et al.&nbsp;2020).</p>
-<p><strong>Question:</strong> can open satellite data show when and where the Reichswald lost canopy vitality and moisture, and whether it recovered?</p>
+<p><strong>Questions:</strong> can open satellite data show when and where the Reichswald lost canopy vitality and moisture, and whether it recovered? And which parts of the forest are most susceptible to wildfire?</p>
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
@@ -217,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Processing was done in Google Earth Engine and Python (rasterio, geopandas). Code: <code>notebooks/01_reichswald_ndvi_ndmi.ipynb</code> and <code>notebooks/01b_reichswald_fire_susceptibility.ipynb</code>.</p>
+<p>Processing was done in Google Earth Engine and Python (rasterio, geopandas). Code: <a href="https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01_reichswald_ndvi_ndmi.ipynb"><code>01_reichswald_ndvi_ndmi.ipynb</code></a> and <a href="https://github.com/ivan220/climate-risk-atlas-nfe/blob/main/notebooks/01b_reichswald_fire_susceptibility.ipynb"><code>01b_reichswald_fire_susceptibility.ipynb</code></a>, with reusable functions in <a href="https://github.com/ivan220/climate-risk-atlas-nfe/tree/main/src"><code>src/</code></a>.</p>
 </section>
 <section id="method" class="level2">
 <h2 class="anchored" data-anchor-id="method">Method</h2>
@@ -251,14 +294,14 @@ Figure&nbsp;1: Summer NDVI and NDMI anomalies over forest pixels. n = number of 
 <li>The 2020 minimum is not an artefact of data availability: 2020 had 21 usable scenes, a typical number.</li>
 </ul>
 <iframe src="figures/reichswald_dndmi_map.html" width="100%" height="520" style="border:none" title="Interactive map of NDMI change 2020–2017"></iframe>
-<p><em>Interactive map: change in summer NDMI between 2017 and 2020. Red = drier canopy in 2020. Switch to the satellite basemap with the layer control (top right).</em></p>
+<p><em>Interactive map: change in summer NDMI between 2017 and 2020. Red = drier canopy in 2020. Use the layer control (top right) to switch basemaps or hide the overlay.</em></p>
 <ul>
 <li>In <strong>45 % of forest pixels</strong>, summer NDMI in 2020 was more than 0.05 below 2017.</li>
 <li>The loss is <strong>widespread across the whole forest</strong>, not limited to its edges.</li>
 <li>Some of the strongest losses form <strong>sharp, rectangular patches</strong>. These shapes point to harvesting or sanitation felling of damaged stands rather than drought stress alone.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -267,7 +310,7 @@ Figure&nbsp;1: Summer NDVI and NDMI anomalies over forest pixels. n = number of 
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><img src="figures/reichswald_dndmi_map.png" class="img-fluid"></p>
 </div>
@@ -447,7 +490,7 @@ Figure&nbsp;2: Relative wildfire susceptibility of forest pixels in the Nürnber
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ivan220\.github\.io\/climate-risk-atlas-nfe\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -778,14 +821,14 @@ Figure&nbsp;2: Relative wildfire susceptibility of forest pixels in the Nürnber
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p>Demonstration project with open data · Not an official assessment</p>
+</div>   
     <div class="nav-footer-center">
-<p>Demonstration project with open data · Iván Alonso</p>
-</div>
-    <div class="nav-footer-right">
       &nbsp;
     </div>
+    <div class="nav-footer-right">
+<p>© Iván Alonso · Built with Quarto</p>
+</div>
   </div>
 </footer>
 

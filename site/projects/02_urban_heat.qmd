@@ -1,6 +1,13 @@
 ---
 title: "Urban heat islands"
+description: "Landsat 8/9 land surface temperature and Zensus 2022 population: who lives in the hottest neighbourhoods?"
+image: ../images/thumb_urban_heat.jpg
+categories: [In progress]
 ---
+
+::: {.callout-note}
+This case study is in progress.
+:::
 
 ## Problem
 ## Data

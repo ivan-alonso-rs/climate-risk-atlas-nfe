@@ -1,6 +1,13 @@
 ---
 title: "Watershed risk in the Regnitz–Pegnitz basin"
+description: "Heavy rain or drought in the Regnitz and Pegnitz catchments with elevation data and Sentinel-1."
+image: ../images/thumb_watershed.jpg
+categories: [In progress]
 ---
+
+::: {.callout-note}
+This case study is in progress.
+:::
 
 ## Problem
 ## Data

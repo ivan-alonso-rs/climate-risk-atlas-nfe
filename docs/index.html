@@ -36,6 +36,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -45,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6a4c8462d4f9405712c1ddc03be73240.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,11 +75,74 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-cases .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-cases'] = new List('listing-cases', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Climate Risk Atlas · Nürnberg–Fürth–Erlangen">
+<meta property="og:description" content="Open-data case studies on climate risks in the Nürnberg–Fürth–Erlangen metropolitan core, built with Sentinel-2 and Google Earth Engine.">
+<meta property="og:image" content="https://ivan220.github.io/climate-risk-atlas-nfe/images/banner.jpg">
+<meta property="og:site_name" content="Climate Risk Atlas · Nürnberg–Fürth–Erlangen">
+<meta property="og:image:alt" content="Map of canopy moisture change in the Nürnberger Reichswald, 2017–2020">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -122,6 +187,18 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ivan220/climate-risk-atlas-nfe"> <i class="bi bi-github" role="img" aria-label="Code on GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/ivan-alonso-rs/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
@@ -132,15 +209,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#key-findings" id="toc-key-findings" class="nav-link active" data-scroll-target="#key-findings">Key findings</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -163,29 +232,112 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>How is climate change showing up in the forests, streets and rivers of the Nürnberg–Fürth–Erlangen metropolitan area? This atlas answers that with open satellite data, one case study at a time.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div class="hero-banner">
+<p><img src="images/banner.jpg" class="img-fluid" alt="Map of canopy moisture change in the Nürnberger Reichswald, 2017–2020"></p>
 </div>
-<div class="callout-title-container flex-fill">
-Note
+<div class="lead-text">
+<p>How is climate change showing up in the forests, streets and rivers of the Nürnberg–Fürth–Erlangen metropolitan area? This atlas answers that with <strong>open satellite data</strong> (Copernicus Sentinel-2, ESA WorldCover) processed in <strong>Google Earth Engine and Python</strong>, one case study at a time.</p>
+</div>
+<section id="case-studies" class="level2">
+<h2 class="anchored" data-anchor-id="case-studies">Case studies</h2>
+<div id="listing-cases" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="UHVibGlzaGVk" data-listing-file-modified-sort="1793220438438" data-listing-reading-time-sort="8" data-listing-word-count-sort="1521">
+<a href="./projects/01_reichswald.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./images/thumb_reichswald.jpg" class="thumbnail-image card-img" style="height: 160px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Forest health in the Nürnberger Reichswald
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHVibGlzaGVk'); return false;">Published</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Sentinel-2 NDVI/NDMI 2017–2025, drought impact mapping and a relative wildfire susceptibility index.</p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Work in progress. First case study: forest health in the Nürnberger Reichswald.</p>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="SW4lMjBwcm9ncmVzcw==" data-listing-file-modified-sort="1793220395051" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./projects/02_urban_heat.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./images/thumb_urban_heat.jpg" class="thumbnail-image card-img" style="height: 160px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Urban heat islands
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('SW4lMjBwcm9ncmVzcw=='); return false;">In progress</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Landsat 8/9 land surface temperature and Zensus 2022 population: who lives in the hottest neighbourhoods?</p>
 </div>
 </div>
-<section id="key-findings" class="level2">
-<h2 class="anchored" data-anchor-id="key-findings">Key findings</h2>
-<ol type="1">
-<li><em>Reichswald:</em> coming soon</li>
-<li><em>Urban heat:</em> coming soon</li>
-<li><em>Watersheds:</em> coming soon</li>
-</ol>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="SW4lMjBwcm9ncmVzcw==" data-listing-file-modified-sort="1793220395081" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./projects/03_watershed.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./images/thumb_watershed.jpg" class="thumbnail-image card-img" style="height: 160px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Watershed risk in the Regnitz–Pegnitz basin
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('SW4lMjBwcm9ncmVzcw=='); return false;">In progress</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Heavy rain or drought in the Regnitz and Pegnitz catchments with elevation data and Sentinel-1.</p>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
+<section id="latest-findings-nürnberger-reichswald" class="level2">
+<h2 class="anchored" data-anchor-id="latest-findings-nürnberger-reichswald">Latest findings: Nürnberger Reichswald</h2>
+<div class="grid">
+<div class="g-col-12 g-col-md-4">
+<div class="stat-card">
+<p><span class="key-number">2020</span></p>
+<p>The low point of canopy moisture (NDMI) after three consecutive drought summers (2018–2020).</p>
+</div>
+</div>
+<div class="g-col-12 g-col-md-4">
+<div class="stat-card">
+<p><span class="key-number">45 %</span></p>
+<p>of forest pixels had a summer NDMI in 2020 more than 0.05 below 2017.</p>
+</div>
+</div>
+<div class="g-col-12 g-col-md-4">
+<div class="stat-card">
+<p><span class="key-number">92 %</span></p>
+<p>of the high wildfire-susceptibility class is pine, concentrated along roads and settlement edges.</p>
+</div>
+</div>
+</div>
+<p><a href="./projects/01_reichswald.html" class="btn btn-primary mt-3">Read the full case study →</a></p>
+<div class="author-strip">
+<p><strong>About the author.</strong> Iván Alonso, geographer and remote sensing specialist based near Erlangen (MSc Environmental &amp; Climate Sciences, FAU). <a href="./about.html">More about me</a> · <a href="https://github.com/ivan220/climate-risk-atlas-nfe">Code on GitHub</a> · <a href="https://www.linkedin.com/in/ivan-alonso-rs/">LinkedIn</a></p>
+</div>
 <hr>
-<p><strong>Kurzfassung (Deutsch):</strong> Dieser Atlas zeigt mit offenen Satellitendaten, wie sich der Klimawandel in Wäldern, Städten und Gewässern der Metropolregion Nürnberg–Fürth–Erlangen bemerkbar macht.</p>
+<p><strong>Kurzfassung (Deutsch):</strong> Dieser Atlas zeigt mit offenen Satellitendaten, wie sich der Klimawandel in Wäldern, Städten und Gewässern der Metropolregion Nürnberg–Fürth–Erlangen bemerkbar macht. Erste Fallstudie: Waldzustand und Waldbrandanfälligkeit im Nürnberger Reichswald.</p>
+
 
 
 </section>
@@ -264,7 +416,7 @@ Note
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ivan220\.github\.io\/climate-risk-atlas-nfe\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -595,14 +747,14 @@ Note
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p>Demonstration project with open data · Not an official assessment</p>
+</div>   
     <div class="nav-footer-center">
-<p>Demonstration project with open data · Iván Alonso</p>
-</div>
-    <div class="nav-footer-right">
       &nbsp;
     </div>
+    <div class="nav-footer-right">
+<p>© Iván Alonso · Built with Quarto</p>
+</div>
   </div>
 </footer>
 

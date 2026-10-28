@@ -1,9 +1,28 @@
 ---
 title: "About"
+toc: false
 ---
 
-I'm Iván Alonso, a geographer and remote sensing specialist based near Erlangen (MSc Environmental & Climate Sciences, FAU).
+I'm **Iván Alonso**, a geographer and remote sensing specialist based near Erlangen (MSc Environmental & Climate Sciences, FAU).
+
+I built this atlas to show how open Earth observation data can turn climate risks into clear, local evidence for planners, forest managers and municipalities.
+
+## What this project demonstrates
+
+| Area | Tools and methods |
+|---|---|
+| Earth observation | Sentinel-2 L2A, cloud masking (SCL), spectral indices (NDVI, NDMI), multi-year composites and anomalies |
+| Cloud processing | Google Earth Engine (Python API) |
+| Geospatial Python | rasterio, geopandas, numpy/pandas, folium; raster–vector integration on a common grid |
+| Spatial analysis | Multi-criteria susceptibility index, distance-decay factors, sensitivity analysis |
+| Open data | ESA WorldCover, DLR Tree Species Germany, OpenStreetMap, WDPA, SRTM |
+| Communication | Reproducible notebooks, interactive web maps, Quarto website, English + German summaries |
+
+## Approach
+
+Every case study follows the same structure: **problem → data → method → results → recommendation → limitations**. Assumptions are stated explicitly and tested where possible. Limitations are part of the result, not a footnote.
+
+## Contact
 
 - [LinkedIn](https://www.linkedin.com/in/ivan-alonso-rs/)
-- [Code on GitHub](#)
-- [CV (PDF)](#)
+- [Code on GitHub](https://github.com/ivan220/climate-risk-atlas-nfe)
