@@ -3,6 +3,12 @@ $primary: #1f5f4a;
 $link-color: #1f5f4a;
 
 /*-- scss:rules --*/
+// section headings: dark text, thin forest-green rule underneath
+main h2 {
+  border-bottom: 2px solid rgba($primary, 0.7) !important;
+  padding-bottom: 0.3rem;
+}
+
 .hero-banner img {
   width: 100%;
   max-height: 260px;
