@@ -1,0 +1,16 @@
+name: atlas
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - earthengine-api
+  - geemap
+  - geopandas
+  - rasterio
+  - rioxarray
+  - xarray
+  - matplotlib
+  - pandas
+  - jupyterlab
+  - ipywidgets
+  - pip

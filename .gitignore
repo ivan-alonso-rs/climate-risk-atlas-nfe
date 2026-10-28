@@ -1,0 +1,9 @@
+data/raw/
+data/processed/
+*.tif
+.ipynb_checkpoints/
+__pycache__/
+site/_site/
+site/.quarto/
+.DS_Store
+Untitled*.ipynb

@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: ../docs   # GitHub Pages serves the /docs folder
+
+website:
+  title: "Climate Risk Atlas · Nürnberg–Fürth–Erlangen"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Case studies
+        menu:
+          - href: projects/01_reichswald.qmd
+          - href: projects/02_urban_heat.qmd
+          - href: projects/03_watershed.qmd
+      - href: about.qmd
+        text: About
+  page-footer:
+    center: "Demonstration project with open data · Iván Alonso"
+
+format:
+  html:
+    theme: cosmo
+    toc: true

@@ -1,0 +1,19 @@
+---
+title: "Climate Risk Atlas · Nürnberg–Fürth–Erlangen"
+---
+
+How is climate change showing up in the forests, streets and rivers of the Nürnberg–Fürth–Erlangen metropolitan area? This atlas answers that with open satellite data, one case study at a time.
+
+::: {.callout-note}
+Work in progress. First case study: forest health in the Nürnberger Reichswald.
+:::
+
+## Key findings
+
+1. *Reichswald:* coming soon
+2. *Urban heat:* coming soon
+3. *Watersheds:* coming soon
+
+---
+
+**Kurzfassung (Deutsch):** Dieser Atlas zeigt mit offenen Satellitendaten, wie sich der Klimawandel in Wäldern, Städten und Gewässern der Metropolregion Nürnberg–Fürth–Erlangen bemerkbar macht.

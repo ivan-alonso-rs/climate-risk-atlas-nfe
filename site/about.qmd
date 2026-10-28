@@ -1,0 +1,9 @@
+---
+title: "About"
+---
+
+I'm Iván Alonso, a geographer and remote sensing specialist based near Erlangen (MSc Environmental & Climate Sciences, FAU).
+
+- [LinkedIn](https://www.linkedin.com/in/ivan-alonso-rs/)
+- [Code on GitHub](#)
+- [CV (PDF)](#)

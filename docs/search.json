@@ -1,0 +1,177 @@
+[
+  {
+    "objectID": "projects/03_watershed.html#data",
+    "href": "projects/03_watershed.html#data",
+    "title": "Watershed risk in the Regnitz–Pegnitz basin",
+    "section": "Data",
+    "text": "Data"
+  },
+  {
+    "objectID": "projects/03_watershed.html#method",
+    "href": "projects/03_watershed.html#method",
+    "title": "Watershed risk in the Regnitz–Pegnitz basin",
+    "section": "Method",
+    "text": "Method"
+  },
+  {
+    "objectID": "projects/03_watershed.html#results",
+    "href": "projects/03_watershed.html#results",
+    "title": "Watershed risk in the Regnitz–Pegnitz basin",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "projects/03_watershed.html#recommendation-for-the-municipality",
+    "href": "projects/03_watershed.html#recommendation-for-the-municipality",
+    "title": "Watershed risk in the Regnitz–Pegnitz basin",
+    "section": "Recommendation for the municipality",
+    "text": "Recommendation for the municipality"
+  },
+  {
+    "objectID": "projects/03_watershed.html#limitations",
+    "href": "projects/03_watershed.html#limitations",
+    "title": "Watershed risk in the Regnitz–Pegnitz basin",
+    "section": "Limitations",
+    "text": "Limitations"
+  },
+  {
+    "objectID": "projects/03_watershed.html#kurzfassung-deutsch",
+    "href": "projects/03_watershed.html#kurzfassung-deutsch",
+    "title": "Watershed risk in the Regnitz–Pegnitz basin",
+    "section": "Kurzfassung (Deutsch)",
+    "text": "Kurzfassung (Deutsch)"
+  },
+  {
+    "objectID": "projects/01_reichswald.html",
+    "href": "projects/01_reichswald.html",
+    "title": "Forest health in the Nürnberger Reichswald",
+    "section": "",
+    "text": "The Nürnberger Reichswald (~280 km²) surrounds Nürnberg, Fürth and Erlangen and is dominated by pine on sandy, water-poor soils. It provides recreation, drinking water protection and cooling for more than a million people. Central Europe went through an exceptional multi-year drought in 2018–2020 (Rakovec et al. 2022), with widespread forest damage (Schuldt et al. 2020).\nQuestion: can open satellite data show when and where the Reichswald lost canopy vitality and moisture, and whether it recovered?"
+  },
+  {
+    "objectID": "projects/01_reichswald.html#problem",
+    "href": "projects/01_reichswald.html#problem",
+    "title": "Forest health in the Nürnberger Reichswald",
+    "section": "",
+    "text": "The Nürnberger Reichswald (~280 km²) surrounds Nürnberg, Fürth and Erlangen and is dominated by pine on sandy, water-poor soils. It provides recreation, drinking water protection and cooling for more than a million people. Central Europe went through an exceptional multi-year drought in 2018–2020 (Rakovec et al. 2022), with widespread forest damage (Schuldt et al. 2020).\nQuestion: can open satellite data show when and where the Reichswald lost canopy vitality and moisture, and whether it recovered?"
+  },
+  {
+    "objectID": "projects/01_reichswald.html#data",
+    "href": "projects/01_reichswald.html#data",
+    "title": "Forest health in the Nürnberger Reichswald",
+    "section": "Data",
+    "text": "Data\n\n\n\n\n\n\n\nDataset\nUse\n\n\n\n\nCopernicus Sentinel-2 L2A (harmonized), 2017–2025\nSummer reflectance (June–August), 10–20 m\n\n\nESA WorldCover 2021\nForest mask (tree cover class)\n\n\nWDPA – Natura 2000 “Nürnberger Reichswald”\nStudy area boundary\n\n\nDLR Tree Species Germany 2022 (10 m)\nFuel type (wildfire index)\n\n\nOpenStreetMap roads, ESA WorldCover built-up\nHuman ignition proxies (wildfire index)\n\n\nSRTM 30 m\nSlope check\n\n\n\nProcessing was done in Google Earth Engine and Python (rasterio, geopandas). Code: notebooks/01_reichswald_ndvi_ndmi.ipynb and notebooks/01b_reichswald_fire_susceptibility.ipynb."
+  },
+  {
+    "objectID": "projects/01_reichswald.html#method",
+    "href": "projects/01_reichswald.html#method",
+    "title": "Forest health in the Nürnberger Reichswald",
+    "section": "Method",
+    "text": "Method\n\nFor each summer (1 June – 31 August), select Sentinel-2 scenes with &lt; 40 % cloud cover and mask clouds and shadows with the Scene Classification Layer (vegetation and bare-soil pixels only).\nBuild a median composite and compute two indices:\n\nNDVI = (NIR − Red) / (NIR + Red): greenness / vitality.\nNDMI = (NIR − SWIR1) / (NIR + SWIR1): canopy water content (Gao 1996; Wilson & Sader 2002).\n\nAverage both indices over forest pixels and express each year as a standardized anomaly (z-score) relative to 2017–2025, so both indices can be compared on the same scale.\nMap the pixel-wise change ΔNDMI = NDMI 2020 − NDMI 2017 (driest year vs. first available year)."
+  },
+  {
+    "objectID": "projects/01_reichswald.html#results",
+    "href": "projects/01_reichswald.html#results",
+    "title": "Forest health in the Nürnberger Reichswald",
+    "section": "Results",
+    "text": "Results\n\n\n\n\n\n\nFigure 1: Summer NDVI and NDMI anomalies over forest pixels. n = number of Sentinel-2 scenes per summer.\n\n\n\n\n2018, 2019 and 2020 were all below average in both indices. The low point was 2020 (z = −1.6 for NDVI, −1.5 for NDMI), not the hotter year 2018: this is consistent with a cumulative effect of three consecutive dry summers.\nMean summer NDMI dropped from 0.33 (2017) to 0.28 (2020); NDVI from 0.81 to 0.77.\nFrom 2021 onwards the forest-wide averages returned to or above the 2017–2025 mean; 2024 had the highest NDVI of the series.\nThe 2020 minimum is not an artefact of data availability: 2020 had 21 usable scenes, a typical number.\n\n\nInteractive map: change in summer NDMI between 2017 and 2020. Red = drier canopy in 2020. Switch to the satellite basemap with the layer control (top right).\n\nIn 45 % of forest pixels, summer NDMI in 2020 was more than 0.05 below 2017.\nThe loss is widespread across the whole forest, not limited to its edges.\nSome of the strongest losses form sharp, rectangular patches. These shapes point to harvesting or sanitation felling of damaged stands rather than drought stress alone.\n\n\n\n\n\n\n\nNoteStatic version of the map"
+  },
+  {
+    "objectID": "projects/01_reichswald.html#wildfire-susceptibility",
+    "href": "projects/01_reichswald.html#wildfire-susceptibility",
+    "title": "Forest health in the Nürnberger Reichswald",
+    "section": "Wildfire susceptibility",
+    "text": "Wildfire susceptibility\nWhere would a fire be most likely to start and find dry, flammable fuel? Following the framework of Chuvieco et al. (2010), a static, relative susceptibility index combines human ignition probability with fuel conditions:\n\n\n\n\n\n\n\n\nFactor\nData\nScaling (0–1)\n\n\n\n\nFuel type\nDLR Tree Species Germany 2022, 10 m\npine 1.0 · other conifers 0.6 · broadleaves 0.3 · canopy-cover loss 0.8\n\n\nFuel moisture\nPer-pixel z-score of summer 2025 NDMI vs. 2017–2025 (Yebra et al. 2013)\nz = −2 → 1, z = +2 → 0\n\n\nHuman ignition\nDistance to roads (OpenStreetMap) and built-up areas (ESA WorldCover)\nexponential decay (300 m / 500 m)\n\n\n\nThe three factors are averaged with equal weights. Pixels are then ranked into relative classes: high = top 20 %, moderate = next 30 %, low = bottom 50 %. Three candidate factors were left out after checking the data:\n\nSlope: the terrain is almost flat (median slope 3°, 90th percentile 7°).\nForest tracks: 90 % of the forest lies within ~120 m of one, so this factor does not discriminate between areas.\nWeather: it changes daily and is covered by the DWD forest fire danger index (Waldbrandgefahrenindex).\n\n\n\n\n\n\n\nFigure 2: Relative wildfire susceptibility of forest pixels in the Nürnberger Reichswald.\n\n\n\n\n\nPine makes up 58 % of the analysed forest (271 km²) but 92 % of the high-susceptibility class.\nHigh values concentrate along motorways and main roads and at the forest–settlement interface, especially in the southern part (Feucht–Wendelstein area) and the north-western edge towards Erlangen.\nSensitivity check: the result is robust to the main assumptions. With doubled weights for any single factor, or with halved or doubled decay distances, the rank correlation with the base index stays between 0.91 and 0.99, and 81–94 % of high-class pixels remain high."
+  },
+  {
+    "objectID": "projects/01_reichswald.html#recommendation-for-the-municipality",
+    "href": "projects/01_reichswald.html#recommendation-for-the-municipality",
+    "title": "Forest health in the Nürnberger Reichswald",
+    "section": "Recommendation for the municipality",
+    "text": "Recommendation for the municipality\n\nUse summer NDMI from Sentinel-2 as a free, annual early-warning indicator of canopy water stress in the Reichswald. It can be updated each September at no data cost.\nPrioritise field inspections in areas with strong and persistent NDMI loss, and cross-check them with forest management records (Bayerische Staatsforsten) to separate drought damage from planned harvesting.\nFocus fire prevention on the high-susceptibility belt along roads and settlement edges. Useful measures include fuel management, signage on high-danger days and access routes for fire services. The long-term option is the gradual conversion of pure pine stands to mixed forest."
+  },
+  {
+    "objectID": "projects/01_reichswald.html#limitations",
+    "href": "projects/01_reichswald.html#limitations",
+    "title": "Forest health in the Nürnberger Reichswald",
+    "section": "Limitations",
+    "text": "Limitations\n\nSingle forest mask (WorldCover 2021). Stands cleared during 2019–2020 may no longer be classified as forest and are excluded, so the “recovery” after 2021 may look more complete than it is on the ground.\nThe 2017 baseline was wetter than average (z = +1.0 for NDMI) and had the fewest scenes (14). Comparing against 2017 therefore somewhat overstates the 2020 decline.\nThe −0.05 ΔNDMI threshold is indicative, not a calibrated damage threshold. No field data were used for validation.\nSatellite indices cannot tell causes apart: drought stress, bark beetle, harvesting and storm damage can all lower NDMI.\nNine summers are too few for a robust trend analysis; results are descriptive.\nThe wildfire index is relative and not validated. Fuel scores, decay distances and weights are expert assumptions (tested in the sensitivity check). Too few mapped fires exist in the area to calibrate it against real ignitions. In Germany the cause of most forest fires is not determined; where it is known, human negligence is the most frequent.\nThe index is static: it shows where fires are more likely, not when. Daily fire danger depends on weather (DWD Waldbrandgefahrenindex).\nOpenStreetMap completeness and the 2022 species map (overall F1 = 0.89) carry their own errors."
+  },
+  {
+    "objectID": "projects/01_reichswald.html#references",
+    "href": "projects/01_reichswald.html#references",
+    "title": "Forest health in the Nürnberger Reichswald",
+    "section": "References",
+    "text": "References\n\nChuvieco, E. et al. (2010). Development of a framework for fire risk assessment using remote sensing and geographic information system technologies. Ecological Modelling, 221(1), 46–58. doi:10.1016/j.ecolmodel.2008.11.017\nDLR (2025). Tree Species Germany 2022 [dataset, 10 m, CC BY 4.0]. German Aerospace Center, EOC Geoservice.\nRomero-Calcerrada, R. et al. (2008). GIS analysis of spatial patterns of human-caused wildfire ignition risk in the SW of Madrid (Central Spain). Landscape Ecology. doi:10.1007/s10980-008-9190-2\nYebra, M. et al. (2013). A global review of remote sensing of live fuel moisture content for fire danger assessment: Moving towards operational products. Remote Sensing of Environment, 136, 455–468. doi:10.1016/j.rse.2013.05.029\nGao, B.-C. (1996). NDWI — A normalized difference water index for remote sensing of vegetation liquid water from space. Remote Sensing of Environment, 58(3), 257–266.\nRakovec, O. et al. (2022). The 2018–2020 multi-year drought sets a new benchmark in Europe. Earth’s Future, 10, e2021EF002394.\nSchuldt, B. et al. (2020). A first assessment of the impact of the extreme 2018 summer drought on Central European forests. Basic and Applied Ecology, 45, 86–103.\nWilson, E. H. & Sader, S. A. (2002). Detection of forest harvest type using multiple dates of Landsat TM imagery. Remote Sensing of Environment, 80(3), 385–396."
+  },
+  {
+    "objectID": "projects/01_reichswald.html#kurzfassung-deutsch",
+    "href": "projects/01_reichswald.html#kurzfassung-deutsch",
+    "title": "Forest health in the Nürnberger Reichswald",
+    "section": "Kurzfassung (Deutsch)",
+    "text": "Kurzfassung (Deutsch)\nMit Sentinel-2-Daten (2017–2025) wurde der Sommerzustand des Nürnberger Reichswalds untersucht. Die Indizes NDVI (Vitalität) und NDMI (Wassergehalt der Baumkronen) lagen in den Dürrejahren 2018–2020 durchgehend unter dem Durchschnitt, mit dem Tiefpunkt im Jahr 2020. Auf 45 % der Waldfläche lag der NDMI 2020 um mehr als 0,05 unter dem Wert von 2017. Ab 2021 erreichten die Mittelwerte wieder das Niveau der Vorjahre. Einige scharf begrenzte Flächen deuten auf Holzeinschlag statt reinen Trockenstress hin. Ein relativer Waldbrand-Anfälligkeitsindex (Baumart, Feuchte, Nähe zu Straßen und Siedlungen) zeigt die höchsten Werte in Kiefernbeständen entlang von Autobahnen, Hauptstraßen und Siedlungsrändern. Empfehlung: den NDMI jährlich als kostenlosen Frühwarnindikator nutzen, mit Forstdaten abgleichen und die Brandvorsorge auf diese Randzonen konzentrieren."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I’m Iván Alonso, a geographer and remote sensing specialist based near Erlangen (MSc Environmental & Climate Sciences, FAU).\n\nLinkedIn\nCode on GitHub\nCV (PDF)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Climate Risk Atlas · Nürnberg–Fürth–Erlangen",
+    "section": "",
+    "text": "How is climate change showing up in the forests, streets and rivers of the Nürnberg–Fürth–Erlangen metropolitan area? This atlas answers that with open satellite data, one case study at a time."
+  },
+  {
+    "objectID": "index.html#key-findings",
+    "href": "index.html#key-findings",
+    "title": "Climate Risk Atlas · Nürnberg–Fürth–Erlangen",
+    "section": "Key findings",
+    "text": "Key findings\n\nReichswald: coming soon\nUrban heat: coming soon\nWatersheds: coming soon\n\n\nKurzfassung (Deutsch): Dieser Atlas zeigt mit offenen Satellitendaten, wie sich der Klimawandel in Wäldern, Städten und Gewässern der Metropolregion Nürnberg–Fürth–Erlangen bemerkbar macht."
+  },
+  {
+    "objectID": "projects/02_urban_heat.html#data",
+    "href": "projects/02_urban_heat.html#data",
+    "title": "Urban heat islands",
+    "section": "Data",
+    "text": "Data"
+  },
+  {
+    "objectID": "projects/02_urban_heat.html#method",
+    "href": "projects/02_urban_heat.html#method",
+    "title": "Urban heat islands",
+    "section": "Method",
+    "text": "Method"
+  },
+  {
+    "objectID": "projects/02_urban_heat.html#results",
+    "href": "projects/02_urban_heat.html#results",
+    "title": "Urban heat islands",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "projects/02_urban_heat.html#recommendation-for-the-municipality",
+    "href": "projects/02_urban_heat.html#recommendation-for-the-municipality",
+    "title": "Urban heat islands",
+    "section": "Recommendation for the municipality",
+    "text": "Recommendation for the municipality"
+  },
+  {
+    "objectID": "projects/02_urban_heat.html#limitations",
+    "href": "projects/02_urban_heat.html#limitations",
+    "title": "Urban heat islands",
+    "section": "Limitations",
+    "text": "Limitations"
+  },
+  {
+    "objectID": "projects/02_urban_heat.html#kurzfassung-deutsch",
+    "href": "projects/02_urban_heat.html#kurzfassung-deutsch",
+    "title": "Urban heat islands",
+    "section": "Kurzfassung (Deutsch)",
+    "text": "Kurzfassung (Deutsch)"
+  }
+]
