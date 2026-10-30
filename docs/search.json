@@ -165,69 +165,83 @@
     "href": "index.html#case-studies",
     "title": "Climate Risk Atlas · Nürnberg–Fürth–Erlangen",
     "section": "Case studies",
-    "text": "Case studies\n\n\n\n\n\n\n\n\n\n\nForest health in the Nürnberger Reichswald\n\n\n\nPublished\n\n\n\nSentinel-2 NDVI/NDMI 2017–2025, drought impact mapping and a relative wildfire susceptibility index.\n\n\n\n\n\n\n\n\n\n\n\n\nUrban heat islands\n\n\n\nIn progress\n\n\n\nLandsat 8/9 land surface temperature and Zensus 2022 population: who lives in the hottest neighbourhoods?\n\n\n\n\n\n\n\n\n\n\n\n\nWatershed risk in the Regnitz–Pegnitz basin\n\n\n\nIn progress\n\n\n\nHeavy rain or drought in the Regnitz and Pegnitz catchments with elevation data and Sentinel-1.\n\n\n\n\n\nNo matching items"
+    "text": "Case studies\n\n\n\n\n\n\n\n\n\n\nForest health in the Nürnberger Reichswald\n\n\n\nPublished\n\n\n\nSentinel-2 NDVI/NDMI 2017–2025, drought impact mapping and a relative wildfire susceptibility index.\n\n\n\n\n\n\n\n\n\n\n\n\nUrban heat islands\n\n\n\nPublished\n\n\n\nLandsat 8/9 summer land surface temperature 2018–2025, land cover and population exposure to heat hotspots.\n\n\n\n\n\n\n\n\n\n\n\n\nWatershed risk in the Regnitz–Pegnitz basin\n\n\n\nIn progress\n\n\n\nHeavy rain or drought in the Regnitz and Pegnitz catchments with elevation data and Sentinel-1.\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#latest-findings-nürnberger-reichswald",
     "href": "index.html#latest-findings-nürnberger-reichswald",
     "title": "Climate Risk Atlas · Nürnberg–Fürth–Erlangen",
     "section": "Latest findings: Nürnberger Reichswald",
-    "text": "Latest findings: Nürnberger Reichswald\n\n\n\n2020\nThe low point of canopy moisture (NDMI) after three consecutive drought summers (2018–2020).\n\n\n\n\n45 %\nof forest pixels had a summer NDMI in 2020 more than 0.05 below 2017.\n\n\n\n\n92 %\nof the high wildfire-susceptibility class is pine, concentrated along roads and settlement edges.\n\n\n\nRead the full case study →\n\nAbout the author. Iván Alonso, geographer and remote sensing specialist based near Erlangen (MSc Environmental & Climate Sciences, FAU). More about me · Code on GitHub · LinkedIn\n\n\nKurzfassung (Deutsch): Dieser Atlas zeigt mit offenen Satellitendaten, wie sich der Klimawandel in Wäldern, Städten und Gewässern der Metropolregion Nürnberg–Fürth–Erlangen bemerkbar macht. Erste Fallstudie: Waldzustand und Waldbrandanfälligkeit im Nürnberger Reichswald."
+    "text": "Latest findings: Nürnberger Reichswald\n\n\n\n2020\nThe low point of canopy moisture (NDMI) after three consecutive drought summers (2018–2020).\n\n\n\n\n45 %\nof forest pixels had a summer NDMI in 2020 more than 0.05 below 2017.\n\n\n\n\n92 %\nof the high wildfire-susceptibility class is pine, concentrated along roads and settlement edges.\n\n\n\nRead the full case study →"
+  },
+  {
+    "objectID": "index.html#latest-findings-urban-heat",
+    "href": "index.html#latest-findings-urban-heat",
+    "title": "Climate Risk Atlas · Nürnberg–Fürth–Erlangen",
+    "section": "Latest findings: urban heat",
+    "text": "Latest findings: urban heat\n\n\n\n+7 °C\nmean summer surface temperature of built-up land compared with forest (34.0 vs. 26.8 °C).\n\n\n\n\n53 %\nof residents live in the hottest 10 % of the territory (LST ≥ 33.9 °C).\n\n\n\n\n574,000\npeople exposed to these hotspots, out of 1.08 million in the covered area.\n\n\n\nRead the full case study →\n\nAbout the author. Iván Alonso, geographer and remote sensing specialist based near Erlangen (MSc Environmental & Climate Sciences, FAU). More about me · Code on GitHub · LinkedIn\n\n\nKurzfassung (Deutsch): Dieser Atlas zeigt mit offenen Satellitendaten, wie sich der Klimawandel in Wäldern, Städten und Gewässern der Metropolregion Nürnberg–Fürth–Erlangen bemerkbar macht. Fallstudien: Waldzustand und Waldbrandanfälligkeit im Nürnberger Reichswald sowie städtische Hitzeinseln (rund 53 % der Einwohner leben in den heißesten 10 % der Fläche)."
   },
   {
     "objectID": "projects/02_urban_heat.html",
     "href": "projects/02_urban_heat.html",
     "title": "Urban heat islands",
     "section": "",
-    "text": "Note\n\n\n\nThis case study is in progress."
+    "text": "TipKey findings\n\n\n\n\nBuilt-up areas are about 7 °C hotter than forest in summer: mean land surface temperature (LST) of 34.0 °C vs. 26.8 °C for tree cover (Landsat 8/9, around 10:30 local time).\n53 % of the residents of the covered area (about 574,000 of 1.08 million) live in the hottest 10 % of the territory (LST ≥ 33.9 °C).\nThe Nürnberger Reichswald, rivers and water bodies form the cool end of the temperature range.\nMethod and code: notebook 2"
   },
   {
     "objectID": "projects/02_urban_heat.html#problem",
     "href": "projects/02_urban_heat.html#problem",
     "title": "Urban heat islands",
     "section": "Problem",
-    "text": "Problem"
+    "text": "Problem\nCities are warmer than their surroundings, mainly because sealed surfaces store heat and there is less vegetation and water to cool the air (Oke 1982). Heat is a health risk, particularly for older people and for people without access to cool places. For a municipality, the first question is spatial: where are the hottest areas, and how many people live in them?"
   },
   {
     "objectID": "projects/02_urban_heat.html#data",
     "href": "projects/02_urban_heat.html#data",
     "title": "Urban heat islands",
     "section": "Data",
-    "text": "Data"
+    "text": "Data\n\n\n\n\n\n\n\nDataset\nUse\n\n\n\n\nLandsat 8 and 9, Collection 2 Level 2 (ST_B10), summers 2018–2025\nLand surface temperature, 30 m (thermal band resampled from 100 m)\n\n\nESA WorldCover 2021 (v200)\nLand cover classes\n\n\nGHSL GHS-POP 2020 (R2023A), 100 m\nModelled population per grid cell\n\n\n\nProcessing was done in Google Earth Engine and Python. Code: 02_urban_heat.ipynb, with reusable functions in src/landsat_utils.py."
   },
   {
     "objectID": "projects/02_urban_heat.html#method",
     "href": "projects/02_urban_heat.html#method",
     "title": "Urban heat islands",
     "section": "Method",
-    "text": "Method"
+    "text": "Method\n\nFor each year 2018–2025, select Landsat 8/9 scenes between 15 May and 15 September, mask cloud, shadow, cirrus, snow and fill pixels with the QA band, and convert ST_B10 to °C.\nTake the median per summer, then the mean of the eight summers, to reduce the effect of individual hot or cool days.\nAverage LST by WorldCover class to link temperature to land cover.\nAggregate LST to the 100 m population grid and define hotspots as the hottest 10 % of cells (90th percentile of LST). Sum the population in hotspot cells."
   },
   {
     "objectID": "projects/02_urban_heat.html#results",
     "href": "projects/02_urban_heat.html#results",
     "title": "Urban heat islands",
     "section": "Results",
-    "text": "Results"
+    "text": "Results\n\nInteractive map: mean summer LST 2018–2025. Use the layer control (top right) to switch basemaps or hide the overlay. The black strip in the west has no thermal data (see Limitations).\n\n\n\nLand cover\nMean LST (°C)\n\n\n\n\nTree cover\n26.8\n\n\nHerbaceous wetland\n27.4\n\n\nWater\n27.6\n\n\nGrassland\n30.3\n\n\nCropland\n31.3\n\n\nBare\n31.5\n\n\nBuilt-up\n34.0\n\n\n\n\nThe temperature gradient follows land cover: forest and water are coolest, built-up land hottest, with a difference of about 7 °C between tree cover and built-up land.\nThe hottest patches are the dense core of Nürnberg and large sealed areas such as industrial and logistics sites.\nThe hotspot threshold (90th percentile) is 33.9 °C. About 574,000 of 1,081,000 residents (53 %) live in cells above it, although these cells are only 10 % of the area. Heat is concentrated where people live.\n\n\n\n\n\n\n\nNoteStatic version of the map"
   },
   {
     "objectID": "projects/02_urban_heat.html#recommendation-for-the-municipality",
     "href": "projects/02_urban_heat.html#recommendation-for-the-municipality",
     "title": "Urban heat islands",
     "section": "Recommendation for the municipality",
-    "text": "Recommendation for the municipality"
+    "text": "Recommendation for the municipality\n\nUse this map to prioritise heat-adaptation measures (trees and shade, unsealing, cool or green roofs, water features) in the hottest residential districts rather than spreading them evenly.\nProtect the cool areas. The Reichswald and river corridors are the coolest parts of the region and should be kept connected to the built-up area.\nCombine this map with social data (age structure, income, housing quality) before deciding where to act: exposure to heat is not the same as vulnerability. The 2022 census grid is the obvious next layer.\nHotspots with few residents, such as industrial and commercial areas, call for different measures than residential ones (for example, reducing sealing and improving surfaces)."
   },
   {
     "objectID": "projects/02_urban_heat.html#limitations",
     "href": "projects/02_urban_heat.html#limitations",
     "title": "Urban heat islands",
     "section": "Limitations",
-    "text": "Limitations"
+    "text": "Limitations\n\nLST is not air temperature. It is the temperature of the surface seen by the satellite and is higher than air temperature on sunny surfaces, especially sealed ones (Voogt & Oke 2003).\nDaytime only. Landsat passes at about 10:30 local time. For health, night-time temperatures matter most, and they are not observed here.\nResolution. The thermal band has 100 m pixels (resampled to 30 m); street-level differences are not resolved.\nData gap in the west. Landsat 8/9 Level 2 surface temperature is not available in Earth Engine for a strip along the western edge of the study area (neither Tier 1 nor Tier 2 scenes). This strip is excluded and the population figures refer to the covered area only.\nModelled population. GHS-POP is a modelled (disaggregated) population grid, not a census count. The estimate of residents in hotspots is therefore approximate.\nHotspot definition. The 10 % threshold is a convention, and the share of people living in hotspots depends on it. It says nothing about absolute health risk.\nAge was not included. Population age (for example, over 65) was not available in a usable form, so the analysis measures exposure of residents, not vulnerability.\nEight summers are a composite of typical conditions, not an analysis of individual heat waves."
+  },
+  {
+    "objectID": "projects/02_urban_heat.html#references",
+    "href": "projects/02_urban_heat.html#references",
+    "title": "Urban heat islands",
+    "section": "References",
+    "text": "References\n\nOke, T. R. (1982). The energetic basis of the urban heat island. Quarterly Journal of the Royal Meteorological Society, 108(455), 1–24. doi:10.1002/qj.49710845502\nSchiavina, M., Freire, S., Carioli, A. & MacManus, K. (2023). GHS-POP R2023A – GHS population grid multitemporal (1975–2030) [dataset]. European Commission, Joint Research Centre. doi:10.2905/2FF68A52-5B5B-4A22-8F40-C41DA8332CFE\nVoogt, J. A. & Oke, T. R. (2003). Thermal remote sensing of urban climates. Remote Sensing of Environment, 86(3), 370–384. doi:10.1016/S0034-4257(03)00079-8\nZanaga, D. et al. (2022). ESA WorldCover 10 m 2021 v200 [dataset]. doi:10.5281/zenodo.7254221"
   },
   {
     "objectID": "projects/02_urban_heat.html#kurzfassung-deutsch",
     "href": "projects/02_urban_heat.html#kurzfassung-deutsch",
     "title": "Urban heat islands",
     "section": "Kurzfassung (Deutsch)",
-    "text": "Kurzfassung (Deutsch)"
+    "text": "Kurzfassung (Deutsch)\nMit Landsat-8/9-Daten (Sommer 2018–2025) wurde die Oberflächentemperatur in Nürnberg, Fürth und Erlangen kartiert. Bebaute Flächen sind im Mittel etwa 7 °C wärmer als Wald (34,0 °C gegenüber 26,8 °C). Die heißesten 10 % der Fläche (ab 33,9 °C) beherbergen rund 53 % der Einwohner des untersuchten Gebiets (ca. 574 000 von 1,08 Mio.). Einschränkungen: Oberflächentemperatur ist nicht Lufttemperatur, es wird nur die Tagessituation (ca. 10:30 Uhr) erfasst, die Bevölkerungsdaten (GHS-POP) sind modelliert, und ein Streifen im Westen ist ohne Daten. Empfehlung: Anpassungsmaßnahmen (Bäume, Entsiegelung, Begrünung) in den heißesten Wohnquartieren priorisieren und die kühlen Flächen wie den Reichswald schützen."
   }
 ]

@@ -8,8 +8,8 @@ Open-data case studies on climate risks in the Nürnberg–Fürth–Erlangen met
 
 | # | Topic | Main data | Status |
 |---|---|---|---|
-| 1 | Forest health in the Nürnberger Reichswald (2017–2025) + wildfire risk | Sentinel-2 (NDVI, NDMI), DWD | planned |
-| 2 | Urban heat islands and vulnerable population | Landsat 8/9 thermal, Zensus 2022 | planned |
+| 1 | Forest health in the Nürnberger Reichswald (2017–2025) + wildfire risk | Sentinel-2 (NDVI, NDMI), DWD | published |
+| 2 | Urban heat islands and population exposure | Landsat 8/9 thermal, GHS-POP | published |
 | 3 | Watershed risk: heavy rain or drought (Regnitz/Pegnitz) | DEM (Bavarian open data), Sentinel-1 | planned |
 
 Each case study answers: problem → data → method → result → recommendation for the municipality → limitations.

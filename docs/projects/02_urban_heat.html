@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Landsat 8/9 land surface temperature and Zensus 2022 population: who lives in the hottest neighbourhoods?">
+<meta name="description" content="Landsat 8/9 summer land surface temperature 2018–2025, land cover and population exposure to heat hotspots.">
 
 <title>Urban heat islands – Climate Risk Atlas · Nürnberg–Fürth–Erlangen</title>
 <style>
@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="Urban heat islands – Climate Risk Atlas · Nürnberg–Fürth–Erlangen">
-<meta property="og:description" content="Landsat 8/9 land surface temperature and Zensus 2022 population: who lives in the hottest neighbourhoods?">
+<meta property="og:description" content="Landsat 8/9 summer land surface temperature 2018–2025, land cover and population exposure to heat hotspots.">
 <meta property="og:image" content="https://ivan-alonso-rs.github.io/climate-risk-atlas-nfe/images/thumb_urban_heat.jpg">
 <meta property="og:site_name" content="Climate Risk Atlas · Nürnberg–Fürth–Erlangen">
 </head>
@@ -160,6 +160,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
   <li><a href="#recommendation-for-the-municipality" id="toc-recommendation-for-the-municipality" class="nav-link" data-scroll-target="#recommendation-for-the-municipality">Recommendation for the municipality</a></li>
   <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   <li><a href="#kurzfassung-deutsch" id="toc-kurzfassung-deutsch" class="nav-link" data-scroll-target="#kurzfassung-deutsch">Kurzfassung (Deutsch)</a></li>
   </ul>
 </nav>
@@ -170,14 +171,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Urban heat islands</h1>
+<p class="subtitle lead">Where is it hottest in Nürnberg–Fürth–Erlangen, and how many people live there?</p>
   <div class="quarto-categories">
-    <div class="quarto-category">In progress</div>
+    <div class="quarto-category">Published</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Landsat 8/9 land surface temperature and Zensus 2022 population: who lives in the hottest neighbourhoods?
+    Landsat 8/9 summer land surface temperature 2018–2025, land cover and population exposure to heat hotspots.
   </div>
 </div>
 
@@ -194,39 +196,166 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Tip</span>Key findings
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This case study is in progress.</p>
+<ul>
+<li><strong>Built-up areas are about 7 °C hotter than forest</strong> in summer: mean land surface temperature (LST) of 34.0 °C vs.&nbsp;26.8 °C for tree cover (Landsat 8/9, around 10:30 local time).</li>
+<li><strong>53 % of the residents</strong> of the covered area (about 574,000 of 1.08 million) live in the <strong>hottest 10 % of the territory</strong> (LST ≥ 33.9 °C).</li>
+<li>The Nürnberger Reichswald, rivers and water bodies form the cool end of the temperature range.</li>
+<li>Method and code: <a href="https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe/blob/main/notebooks/02_urban_heat.ipynb">notebook 2</a></li>
+</ul>
 </div>
 </div>
 <section id="problem" class="level2">
 <h2 class="anchored" data-anchor-id="problem">Problem</h2>
+<p>Cities are warmer than their surroundings, mainly because sealed surfaces store heat and there is less vegetation and water to cool the air (Oke 1982). Heat is a health risk, particularly for older people and for people without access to cool places. For a municipality, the first question is spatial: <strong>where are the hottest areas, and how many people live in them?</strong></p>
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dataset</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Landsat 8 and 9, Collection 2 Level 2 (<code>ST_B10</code>), summers 2018–2025</td>
+<td>Land surface temperature, 30 m (thermal band resampled from 100 m)</td>
+</tr>
+<tr class="even">
+<td>ESA WorldCover 2021 (v200)</td>
+<td>Land cover classes</td>
+</tr>
+<tr class="odd">
+<td>GHSL GHS-POP 2020 (R2023A), 100 m</td>
+<td>Modelled population per grid cell</td>
+</tr>
+</tbody>
+</table>
+<p>Processing was done in Google Earth Engine and Python. Code: <a href="https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe/blob/main/notebooks/02_urban_heat.ipynb"><code>02_urban_heat.ipynb</code></a>, with reusable functions in <a href="https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe/blob/main/src/landsat_utils.py"><code>src/landsat_utils.py</code></a>.</p>
 </section>
 <section id="method" class="level2">
 <h2 class="anchored" data-anchor-id="method">Method</h2>
+<ol type="1">
+<li>For each year 2018–2025, select Landsat 8/9 scenes between 15 May and 15 September, mask cloud, shadow, cirrus, snow and fill pixels with the QA band, and convert <code>ST_B10</code> to °C.</li>
+<li>Take the <strong>median per summer</strong>, then the <strong>mean of the eight summers</strong>, to reduce the effect of individual hot or cool days.</li>
+<li>Average LST by <strong>WorldCover class</strong> to link temperature to land cover.</li>
+<li>Aggregate LST to the 100 m population grid and define <strong>hotspots as the hottest 10 % of cells</strong> (90th percentile of LST). Sum the population in hotspot cells.</li>
+</ol>
 </section>
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
+<iframe src="figures/urban_heat_lst_map.html" width="100%" height="520" style="border:none" title="Interactive map of mean summer land surface temperature"></iframe>
+<p><em>Interactive map: mean summer LST 2018–2025. Use the layer control (top right) to switch basemaps or hide the overlay. The black strip in the west has no thermal data (see Limitations).</em></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Land cover</th>
+<th>Mean LST (°C)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tree cover</td>
+<td>26.8</td>
+</tr>
+<tr class="even">
+<td>Herbaceous wetland</td>
+<td>27.4</td>
+</tr>
+<tr class="odd">
+<td>Water</td>
+<td>27.6</td>
+</tr>
+<tr class="even">
+<td>Grassland</td>
+<td>30.3</td>
+</tr>
+<tr class="odd">
+<td>Cropland</td>
+<td>31.3</td>
+</tr>
+<tr class="even">
+<td>Bare</td>
+<td>31.5</td>
+</tr>
+<tr class="odd">
+<td><strong>Built-up</strong></td>
+<td><strong>34.0</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The temperature gradient follows land cover: <strong>forest and water are coolest, built-up land hottest</strong>, with a difference of about 7 °C between tree cover and built-up land.</li>
+<li>The hottest patches are the dense core of Nürnberg and large sealed areas such as industrial and logistics sites.</li>
+<li>The hotspot threshold (90th percentile) is <strong>33.9 °C</strong>. About <strong>574,000 of 1,081,000 residents (53 %)</strong> live in cells above it, although these cells are only 10 % of the area. Heat is concentrated where people live.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Static version of the map
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><img src="figures/urban_heat_lst_map.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
 </section>
 <section id="recommendation-for-the-municipality" class="level2">
 <h2 class="anchored" data-anchor-id="recommendation-for-the-municipality">Recommendation for the municipality</h2>
+<ul>
+<li><strong>Use this map to prioritise heat-adaptation measures</strong> (trees and shade, unsealing, cool or green roofs, water features) in the hottest residential districts rather than spreading them evenly.</li>
+<li><strong>Protect the cool areas.</strong> The Reichswald and river corridors are the coolest parts of the region and should be kept connected to the built-up area.</li>
+<li><strong>Combine this map with social data</strong> (age structure, income, housing quality) before deciding where to act: exposure to heat is not the same as vulnerability. The 2022 census grid is the obvious next layer.</li>
+<li>Hotspots with few residents, such as industrial and commercial areas, call for different measures than residential ones (for example, reducing sealing and improving surfaces).</li>
+</ul>
 </section>
 <section id="limitations" class="level2">
 <h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
+<ul>
+<li><strong>LST is not air temperature.</strong> It is the temperature of the surface seen by the satellite and is higher than air temperature on sunny surfaces, especially sealed ones (Voogt &amp; Oke 2003).</li>
+<li><strong>Daytime only.</strong> Landsat passes at about 10:30 local time. For health, night-time temperatures matter most, and they are not observed here.</li>
+<li><strong>Resolution.</strong> The thermal band has 100 m pixels (resampled to 30 m); street-level differences are not resolved.</li>
+<li><strong>Data gap in the west.</strong> Landsat 8/9 Level 2 surface temperature is not available in Earth Engine for a strip along the western edge of the study area (neither Tier 1 nor Tier 2 scenes). This strip is excluded and the population figures refer to the covered area only.</li>
+<li><strong>Modelled population.</strong> GHS-POP is a modelled (disaggregated) population grid, not a census count. The estimate of residents in hotspots is therefore approximate.</li>
+<li><strong>Hotspot definition.</strong> The 10 % threshold is a convention, and the share of people living in hotspots depends on it. It says nothing about absolute health risk.</li>
+<li><strong>Age was not included.</strong> Population age (for example, over 65) was not available in a usable form, so the analysis measures exposure of residents, not vulnerability.</li>
+<li>Eight summers are a composite of typical conditions, not an analysis of individual heat waves.</li>
+</ul>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>Oke, T. R. (1982). The energetic basis of the urban heat island. <em>Quarterly Journal of the Royal Meteorological Society</em>, 108(455), 1–24. <a href="https://doi.org/10.1002/qj.49710845502">doi:10.1002/qj.49710845502</a></li>
+<li>Schiavina, M., Freire, S., Carioli, A. &amp; MacManus, K. (2023). <em>GHS-POP R2023A – GHS population grid multitemporal (1975–2030)</em> [dataset]. European Commission, Joint Research Centre. <a href="https://doi.org/10.2905/2FF68A52-5B5B-4A22-8F40-C41DA8332CFE">doi:10.2905/2FF68A52-5B5B-4A22-8F40-C41DA8332CFE</a></li>
+<li>Voogt, J. A. &amp; Oke, T. R. (2003). Thermal remote sensing of urban climates. <em>Remote Sensing of Environment</em>, 86(3), 370–384. <a href="https://doi.org/10.1016/S0034-4257(03)00079-8">doi:10.1016/S0034-4257(03)00079-8</a></li>
+<li>Zanaga, D. et al.&nbsp;(2022). <em>ESA WorldCover 10 m 2021 v200</em> [dataset]. <a href="https://doi.org/10.5281/zenodo.7254221">doi:10.5281/zenodo.7254221</a></li>
+</ul>
+<hr>
 </section>
 <section id="kurzfassung-deutsch" class="level2">
 <h2 class="anchored" data-anchor-id="kurzfassung-deutsch">Kurzfassung (Deutsch)</h2>
+<p>Mit Landsat-8/9-Daten (Sommer 2018–2025) wurde die Oberflächentemperatur in Nürnberg, Fürth und Erlangen kartiert. Bebaute Flächen sind im Mittel etwa 7 °C wärmer als Wald (34,0 °C gegenüber 26,8 °C). Die heißesten 10 % der Fläche (ab 33,9 °C) beherbergen rund 53 % der Einwohner des untersuchten Gebiets (ca. 574 000 von 1,08 Mio.). Einschränkungen: Oberflächentemperatur ist nicht Lufttemperatur, es wird nur die Tagessituation (ca. 10:30 Uhr) erfasst, die Bevölkerungsdaten (GHS-POP) sind modelliert, und ein Streifen im Westen ist ohne Daten. Empfehlung: Anpassungsmaßnahmen (Bäume, Entsiegelung, Begrünung) in den heißesten Wohnquartieren priorisieren und die kühlen Flächen wie den Reichswald schützen.</p>
 
 
 </section>

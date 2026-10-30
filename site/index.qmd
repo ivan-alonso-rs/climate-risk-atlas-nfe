@@ -57,10 +57,42 @@ of the high wildfire-susceptibility class is pine, concentrated along roads and 
 
 [Read the full case study →](projects/01_reichswald.qmd){.btn .btn-primary .mt-3}
 
+## Latest findings: urban heat
+
+:::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.stat-card}
+[+7 °C]{.key-number}
+
+mean summer surface temperature of built-up land compared with forest (34.0 vs. 26.8 °C).
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.stat-card}
+[53 %]{.key-number}
+
+of residents live in the hottest 10 % of the territory (LST ≥ 33.9 °C).
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.stat-card}
+[574,000]{.key-number}
+
+people exposed to these hotspots, out of 1.08 million in the covered area.
+:::
+:::
+
+::::
+
+[Read the full case study →](projects/02_urban_heat.qmd){.btn .btn-primary .mt-3}
+
 ::: {.author-strip}
 **About the author.** Iván Alonso, geographer and remote sensing specialist based near Erlangen (MSc Environmental & Climate Sciences, FAU). [More about me](about.qmd) · [Code on GitHub](https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe) · [LinkedIn](https://www.linkedin.com/in/ivan-alonso-rs/)
 :::
 
 ---
 
-**Kurzfassung (Deutsch):** Dieser Atlas zeigt mit offenen Satellitendaten, wie sich der Klimawandel in Wäldern, Städten und Gewässern der Metropolregion Nürnberg–Fürth–Erlangen bemerkbar macht. Erste Fallstudie: Waldzustand und Waldbrandanfälligkeit im Nürnberger Reichswald.
+**Kurzfassung (Deutsch):** Dieser Atlas zeigt mit offenen Satellitendaten, wie sich der Klimawandel in Wäldern, Städten und Gewässern der Metropolregion Nürnberg–Fürth–Erlangen bemerkbar macht. Fallstudien: Waldzustand und Waldbrandanfälligkeit im Nürnberger Reichswald sowie städtische Hitzeinseln (rund 53 % der Einwohner leben in den heißesten 10 % der Fläche).
