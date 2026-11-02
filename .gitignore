@@ -7,3 +7,5 @@ site/_site/
 site/.quarto/
 .DS_Store
 Untitled*.ipynb
+data/context.txt
+.Rhistory

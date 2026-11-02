@@ -17,7 +17,7 @@ listing:
 :::
 
 ::: {.lead-text}
-How is climate change showing up in the forests, streets and rivers of the Nürnberg–Fürth–Erlangen metropolitan area? This atlas answers that with **open satellite data** (Copernicus Sentinel-2, ESA WorldCover) processed in **Google Earth Engine and Python**, one case study at a time.
+How is climate change showing up in the forests, streets and rivers of the Nürnberg–Fürth–Erlangen metropolitan area? This atlas answers that with **open satellite and elevation data** (Copernicus Sentinel-2, Landsat, ESA WorldCover, laser-scanning DEMs) processed in **Google Earth Engine and Python**, one case study at a time.
 :::
 
 ## Case studies
@@ -89,10 +89,42 @@ people exposed to these hotspots, out of 1.08 million in the covered area.
 
 [Read the full case study →](projects/02_urban_heat.qmd){.btn .btn-primary .mt-3}
 
+## Latest findings: pluvial flooding
+
+:::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.stat-card}
+[27,900]{.key-number}
+
+terrain depressions (≥ 0.20 m deep) where heavy-rain runoff can collect, in a 43 × 45 km area.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.stat-card}
+[62 km²]{.key-number}
+
+of modelled depressions; the largest ones are mostly road and railway embankments acting as dams in the DEM.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.stat-card}
+[139]{.key-number}
+
+depressions removed by the water and bare-ground check: the obvious filters did not fix the artefacts.
+:::
+:::
+
+::::
+
+[Read the full case study →](projects/03_watershed.qmd){.btn .btn-primary .mt-3}
+
 ::: {.author-strip}
 **About the author.** Iván Alonso, geographer and remote sensing specialist based near Erlangen (MSc Environmental & Climate Sciences, FAU). [More about me](about.qmd) · [Code on GitHub](https://github.com/ivan-alonso-rs/climate-risk-atlas-nfe) · [LinkedIn](https://www.linkedin.com/in/ivan-alonso-rs/)
 :::
 
 ---
 
-**Kurzfassung (Deutsch):** Dieser Atlas zeigt mit offenen Satellitendaten, wie sich der Klimawandel in Wäldern, Städten und Gewässern der Metropolregion Nürnberg–Fürth–Erlangen bemerkbar macht. Fallstudien: Waldzustand und Waldbrandanfälligkeit im Nürnberger Reichswald sowie städtische Hitzeinseln (rund 53 % der Einwohner leben in den heißesten 10 % der Fläche).
+**Kurzfassung (Deutsch):** Dieser Atlas zeigt mit offenen Satellitendaten, wie sich der Klimawandel in Wäldern, Städten und Gewässern der Metropolregion Nürnberg–Fürth–Erlangen bemerkbar macht. Fallstudien: Waldzustand und Waldbrandanfälligkeit im Nürnberger Reichswald, städtische Hitzeinseln (rund 53 % der Einwohner leben in den heißesten 10 % der Fläche) sowie Starkregen-Senken (rund 27 900 Senken im Geländemodell, die größten meist Dammartefakte).

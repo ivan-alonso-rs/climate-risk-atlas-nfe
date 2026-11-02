@@ -1,6 +1,6 @@
 # Climate Risk Atlas – Nürnberg · Fürth · Erlangen
 
-Open-data case studies on climate risks in the Nürnberg–Fürth–Erlangen metropolitan core, built with satellite data (Sentinel-1/2, Landsat) and Google Earth Engine from Python.
+Open-data case studies on climate risks in the Nürnberg–Fürth–Erlangen metropolitan core, built with satellite data (Sentinel-2, Landsat), laser-scanning elevation data and Google Earth Engine, from Python.
 
 **Author:** Iván Eduardo Alonso Ramírez · [LinkedIn](https://www.linkedin.com/in/ivan-alonso-rs/)
 
@@ -10,7 +10,7 @@ Open-data case studies on climate risks in the Nürnberg–Fürth–Erlangen met
 |---|---|---|---|
 | 1 | Forest health in the Nürnberger Reichswald (2017–2025) + wildfire risk | Sentinel-2 (NDVI, NDMI), DWD | published |
 | 2 | Urban heat islands and population exposure | Landsat 8/9 thermal, GHS-POP | published |
-| 3 | Watershed risk: heavy rain or drought (Regnitz/Pegnitz) | DEM (Bavarian open data), Sentinel-1 | planned |
+| 3 | Pluvial flooding: terrain depressions from 1 m and 5 m DEM | DGM1 (Bavarian open data), OSM, WorldCover | published (embankment breaching pending) |
 
 Each case study answers: problem → data → method → result → recommendation for the municipality → limitations.
 
