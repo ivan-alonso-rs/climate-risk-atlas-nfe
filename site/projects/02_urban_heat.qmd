@@ -43,7 +43,7 @@ Processing was done in Google Earth Engine and Python. Code: [`02_urban_heat.ipy
 <iframe src="figures/urban_heat_lst_map.html" width="100%" height="520" style="border:none" title="Interactive map of mean summer land surface temperature"></iframe>
 ```
 
-*Interactive map: mean summer LST 2018–2025. Use the layer control (top right) to switch basemaps or hide the overlay. The black strip in the west has no thermal data (see Limitations).*
+*Interactive map of the metropolitan area (Nürnberg–Fürth–Erlangen): mean summer LST 2018–2025. Use the layer control (top right) to switch basemaps or hide the overlay. The black strip in the west has no thermal data (see Limitations).*
 
 | Land cover | Mean LST (°C) |
 |---|---|
@@ -62,7 +62,7 @@ Processing was done in Google Earth Engine and Python. Code: [`02_urban_heat.ipy
 ::: {.callout-note collapse="true"}
 ## Static version of the map
 
-![](figures/urban_heat_lst_map.png)
+![Static map of the metropolitan area: the hot Nürnberg–Fürth urban core is left of centre and the cool Reichswald forest right of centre; the black strip in the west has no data.](figures/urban_heat_lst_map.png)
 :::
 
 ## Recommendation for the municipality

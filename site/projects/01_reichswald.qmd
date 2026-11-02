@@ -46,7 +46,7 @@ Processing was done in Google Earth Engine and Python (rasterio, geopandas). Cod
 
 ## Results
 
-![Summer NDVI and NDMI anomalies over forest pixels. n = number of Sentinel-2 scenes per summer.](figures/reichswald_anomalies.png){#fig-anomalies}
+![Summer NDVI and NDMI anomalies over forest pixels. n = number of Sentinel-2 scenes per summer. Area: forest pixels of the Nürnberger Reichswald, south-east of Nürnberg.](figures/reichswald_anomalies.png){#fig-anomalies}
 
 - **2018, 2019 and 2020 were all below average** in both indices. The low point was **2020** (z = −1.6 for NDVI, −1.5 for NDMI), not the hotter year 2018: this is consistent with a cumulative effect of three consecutive dry summers.
 - Mean summer NDMI dropped from **0.33 (2017) to 0.28 (2020)**; NDVI from **0.81 to 0.77**.
@@ -57,7 +57,7 @@ Processing was done in Google Earth Engine and Python (rasterio, geopandas). Cod
 <iframe src="figures/reichswald_dndmi_map.html" width="100%" height="520" style="border:none" title="Interactive map of NDMI change 2020–2017"></iframe>
 ```
 
-*Interactive map: change in summer NDMI between 2017 and 2020. Red = drier canopy in 2020. Use the layer control (top right) to switch basemaps or hide the overlay.*
+*Interactive map (Nürnberger Reichswald, south-east of Nürnberg): change in summer NDMI between 2017 and 2020. Red = drier canopy in 2020. Use the layer control (top right) to switch basemaps or hide the overlay.*
 
 - In **45 % of forest pixels**, summer NDMI in 2020 was more than 0.05 below 2017.
 - The loss is **widespread across the whole forest**, not limited to its edges.
@@ -66,7 +66,7 @@ Processing was done in Google Earth Engine and Python (rasterio, geopandas). Cod
 ::: {.callout-note collapse="true"}
 ## Static version of the map
 
-![](figures/reichswald_dndmi_map.png)
+![Static map of the NDMI change 2020–2017 in the Nürnberger Reichswald, south-east of Nürnberg.](figures/reichswald_dndmi_map.png)
 :::
 
 ## Wildfire susceptibility
@@ -85,7 +85,7 @@ The three factors are averaged with equal weights. Pixels are then ranked into *
 - **Forest tracks:** 90 % of the forest lies within ~120 m of one, so this factor does not discriminate between areas.
 - **Weather:** it changes daily and is covered by the DWD forest fire danger index (*Waldbrandgefahrenindex*).
 
-![Relative wildfire susceptibility of forest pixels in the Nürnberger Reichswald.](figures/reichswald_fire_susceptibility.png){#fig-fire}
+![Relative wildfire susceptibility of forest pixels in the Nürnberger Reichswald, south-east of Nürnberg.](figures/reichswald_fire_susceptibility.png){#fig-fire}
 
 ```{=html}
 <iframe src="figures/reichswald_fire_map.html" width="100%" height="520" style="border:none" title="Interactive wildfire susceptibility map"></iframe>

@@ -159,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#method-and-scientific-rationale" id="toc-method-and-scientific-rationale" class="nav-link" data-scroll-target="#method-and-scientific-rationale">Method and scientific rationale</a></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
   <ul class="collapse">
-  <li><a href="#pilot-central-nürnberg-1-m-4-4-km" id="toc-pilot-central-nürnberg-1-m-4-4-km" class="nav-link" data-scroll-target="#pilot-central-nürnberg-1-m-4-4-km">Pilot: central Nürnberg (1 m, 4 × 4 km)</a></li>
+  <li><a href="#pilot-nürnbergfürth-urban-core-1-m-4-4-km" id="toc-pilot-nürnbergfürth-urban-core-1-m-4-4-km" class="nav-link" data-scroll-target="#pilot-nürnbergfürth-urban-core-1-m-4-4-km">Pilot: Nürnberg–Fürth urban core (1 m, 4 × 4 km)</a></li>
   <li><a href="#metropolitan-area-5-m" id="toc-metropolitan-area-5-m" class="nav-link" data-scroll-target="#metropolitan-area-5-m">Metropolitan area (5 m)</a></li>
   <li><a href="#what-the-largest-depressions-really-are" id="toc-what-the-largest-depressions-really-are" class="nav-link" data-scroll-target="#what-the-largest-depressions-really-are">What the largest depressions really are</a></li>
   </ul></li>
@@ -266,12 +266,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
-<section id="pilot-central-nürnberg-1-m-4-4-km" class="level3">
-<h3 class="anchored" data-anchor-id="pilot-central-nürnberg-1-m-4-4-km">Pilot: central Nürnberg (1 m, 4 × 4 km)</h3>
+<section id="pilot-nürnbergfürth-urban-core-1-m-4-4-km" class="level3">
+<h3 class="anchored" data-anchor-id="pilot-nürnbergfürth-urban-core-1-m-4-4-km">Pilot: Nürnberg–Fürth urban core (1 m, 4 × 4 km)</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/pluvial_pilot_depressions.png" class="img-fluid figure-img"></p>
-<figcaption>Depressions in the bare-earth DEM with OSM buildings (orange). Red outlines: 50 largest by volume.</figcaption>
+<figcaption>Pilot window, 4 × 4 km in the Nürnberg–Fürth urban core: depressions in the bare-earth DEM with OSM buildings (orange). Red outlines: 50 largest by volume.</figcaption>
 </figure>
 </div>
 <p>The 1 m pilot covers a 4 × 4 km window in the centre of the pilot area, because the full 11 × 11 km grid (128 million cells) was too heavy for the flow-routing library. After the size filters (≥ 50 m³ or ≥ 100 m²) and the building filter, <strong>818 depressions</strong> remain. They sit in parks, road and railway cuttings and along the river, which is plausible. The largest holds about 158,000 m³ (3.4 m deep, 0.66 km² catchment) and looks like a real basin. The deepest (12.6 m) is a trench or quarry-like feature that could be a real underpass or a DEM artefact; this was not resolved. The river channel also appears as a depression, because the pilot did not mask water.</p>
@@ -281,7 +281,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/pluvial_metro_depressions.png" class="img-fluid figure-img"></p>
-<figcaption>Depression depth across the 43 × 45 km area. Red circles: 30 largest by volume.</figcaption>
+<figcaption>Whole metropolitan area (Nürnberg–Fürth–Erlangen, 43 × 45 km, UTM 32N coordinates): depression depth. Red circles: 30 largest by volume.</figcaption>
 </figure>
 </div>
 <ul>
@@ -296,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/pluvial_top6_check.png" class="img-fluid figure-img"></p>
-<figcaption>Hillshade of the six largest depressions (blue = modelled depth).</figcaption>
+<figcaption>Hillshade of the six largest depressions, located within the metropolitan area (UTM 32N coordinates in each panel title; blue = modelled depth).</figcaption>
 </figure>
 </div>
 <p>From the hillshade alone (no orthophoto), the six largest are:</p>

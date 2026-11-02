@@ -38,15 +38,15 @@ Heavy rain can flood streets and basements far from any river, wherever surface 
 
 ## Results
 
-### Pilot: central Nürnberg (1 m, 4 × 4 km)
+### Pilot: Nürnberg–Fürth urban core (1 m, 4 × 4 km)
 
-![Depressions in the bare-earth DEM with OSM buildings (orange). Red outlines: 50 largest by volume.](figures/pluvial_pilot_depressions.png)
+![Pilot window, 4 × 4 km in the Nürnberg–Fürth urban core: depressions in the bare-earth DEM with OSM buildings (orange). Red outlines: 50 largest by volume.](figures/pluvial_pilot_depressions.png)
 
 The 1 m pilot covers a 4 × 4 km window in the centre of the pilot area, because the full 11 × 11 km grid (128 million cells) was too heavy for the flow-routing library. After the size filters (≥ 50 m³ or ≥ 100 m²) and the building filter, **818 depressions** remain. They sit in parks, road and railway cuttings and along the river, which is plausible. The largest holds about 158,000 m³ (3.4 m deep, 0.66 km² catchment) and looks like a real basin. The deepest (12.6 m) is a trench or quarry-like feature that could be a real underpass or a DEM artefact; this was not resolved. The river channel also appears as a depression, because the pilot did not mask water.
 
 ### Metropolitan area (5 m)
 
-![Depression depth across the 43 × 45 km area. Red circles: 30 largest by volume.](figures/pluvial_metro_depressions.png)
+![Whole metropolitan area (Nürnberg–Fürth–Erlangen, 43 × 45 km, UTM 32N coordinates): depression depth. Red circles: 30 largest by volume.](figures/pluvial_metro_depressions.png)
 
 - **27,932 depressions** remain, with a modelled volume of 37.2 million m³ over 62.2 km². Half are shallower than 0.40 m; 4,313 are at least 1 m deep.
 - OSM building and water masks cover 3.5 % and 1.3 % of the area.
@@ -55,7 +55,7 @@ The 1 m pilot covers a 4 × 4 km window in the centre of the pilot area, because
 
 ### What the largest depressions really are
 
-![Hillshade of the six largest depressions (blue = modelled depth).](figures/pluvial_top6_check.png)
+![Hillshade of the six largest depressions, located within the metropolitan area (UTM 32N coordinates in each panel title; blue = modelled depth).](figures/pluvial_top6_check.png)
 
 From the hillshade alone (no orthophoto), the six largest are:
 
